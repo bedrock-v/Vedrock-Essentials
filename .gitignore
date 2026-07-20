@@ -1,0 +1,12 @@
+# V compiler output
+*.o
+*.so
+*.dylib
+*.dll
+*.exe
+main
+essentials
+
+# V cache
+.cache/
+v_modules/
