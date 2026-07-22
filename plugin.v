@@ -1,6 +1,7 @@
 module vedrock_essentials
 
 import plugins
+import commands
 
 pub struct Essentials {
     plugins.Base
@@ -15,6 +16,7 @@ pub fn (e Essentials) meta() plugins.Meta {
 }
 
 pub fn (mut e Essentials) on_enable(mut api plugins.Api) {
+    api.register_command(commands.MsgCommand{})
     e.log.info('Essentials enabled')
 }
 
