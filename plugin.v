@@ -17,7 +17,6 @@ pub fn (e Essentials) meta() plugins.Meta {
 
 pub fn (mut e Essentials) on_enable(mut api plugins.Api) {
     api.register_command(commands.MsgCommand{})
-    api.register_command(commands.BroadcastCommand{})
     e.log.info('Essentials enabled')
 }
 
