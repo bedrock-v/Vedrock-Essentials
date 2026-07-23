@@ -11,3 +11,8 @@ essentials
 .cache/
 v_modules/
 Vedrock-Essentials
+lang/
+data/
+vedrock.yml
+crashdumps/
+worlds/
