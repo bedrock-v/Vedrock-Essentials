@@ -16,3 +16,8 @@ data/
 vedrock.yml
 crashdumps/
 worlds/
+ops.txt
+permissions.yml
+player_permissions.yml
+whitelist.txt
+players/
