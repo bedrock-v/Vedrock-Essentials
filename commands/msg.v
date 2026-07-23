@@ -1,7 +1,6 @@
 module commands
 
 import vedrock.server.cmd
-import vedrock.server.permission
 
 pub struct MsgCommand {}
 

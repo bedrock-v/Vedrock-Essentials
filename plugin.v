@@ -1,4 +1,4 @@
-module vedrock_essentials
+module main
 
 import plugins
 import commands

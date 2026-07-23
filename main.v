@@ -6,7 +6,7 @@ import vedrock.server.conf
 import vedrock.server
 import vedrock.server.crash
 import plugins
-import commands
+
 
 const crashdumps_dir = 'crashdumps'
 
