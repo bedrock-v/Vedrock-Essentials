@@ -20,7 +20,7 @@ pub fn (c DelwarpCommand) aliases() []string {
 }
 
 pub fn (c DelwarpCommand) permission() string {
-    return ''
+    return 'essentials.delwarp'
 }
 
 pub fn (c DelwarpCommand) arguments() []cmd.Argument {

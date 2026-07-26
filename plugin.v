@@ -2,6 +2,7 @@ module main
 
 import plugins
 import commands
+import vedrock.server.permission
 
 pub struct Essentials {
     plugins.Base
@@ -23,6 +24,17 @@ pub fn (mut e Essentials) on_enable(mut api plugins.Api) {
     e.tpa = commands.new_tpa_manager()
     e.home = commands.new_home_manager()
     e.warp = commands.new_warp_manager()
+
+    permission.register(permission.Permission{
+        name:        'essentials.setwarp'
+        description: 'Allows creating warp points'
+        default:     .op
+    })
+    permission.register(permission.Permission{
+        name:        'essentials.delwarp'
+        description: 'Allows deleting warp points'
+        default:     .op
+    })
 
     api.register_command(commands.MsgCommand{})
     api.register_command(commands.SpawnCommand{})

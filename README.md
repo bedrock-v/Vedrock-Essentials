@@ -15,7 +15,6 @@ v install https://github.com/bedrock-v/plugins.git
 
 ## Commands
 
-> **Note:** Permissions are not yet implemented. All commands are currently accessible to everyone.
 
 
 ### Communication

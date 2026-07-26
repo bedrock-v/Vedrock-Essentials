@@ -20,7 +20,7 @@ pub fn (c SetwarpCommand) aliases() []string {
 }
 
 pub fn (c SetwarpCommand) permission() string {
-    return ''
+    return 'essentials.setwarp'
 }
 
 pub fn (c SetwarpCommand) arguments() []cmd.Argument {
