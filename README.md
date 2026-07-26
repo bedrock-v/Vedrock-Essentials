@@ -4,22 +4,39 @@ The essential plugin suite for Vedrock: teleportation, moderation, and server ma
 
 > **Status:** Work in progress — commands are being added as the Vedrock framework API expands.
 
+## Installation
+
+Requires [Vedrock](https://github.com/bedrock-v/Vedrock03) and [bedrock-v/plugins](https://github.com/bedrock-v/plugins).
+
+```
+v install https://github.com/bedrock-v/plugins.git
+```
+
+
 ## Commands
 
 ### Communication
 | Command | Description |
 |---------|-------------|
-| `/msg` | Send a private message to a player |
+| `/msg <player> <message>` | Send a private message to a player |
 
 ### Teleportation
 | Command | Description |
 |---------|-------------|
-| `/tpa` | Request to teleport to another player |
 | `/spawn` | Teleport to the world spawn |
-| `/home` | Teleport to your saved home |
-| `/warp` | Teleport to a warp point |
+| `/tpa <player>` | Request to teleport to a player |
+| `/tpaccept` | Accept a pending teleport request |
+| `/tpdeny` | Deny a pending teleport request |
 
-### Moderation
+### Homes
+| Command | Description |
+|---------|-------------|
+| `/sethome [name]` | Save your current position as a home (default: "default") |
+| `/home [name]` | Teleport to a saved home |
+| `/delhome [name]` | Delete a saved home |
+| `/homes` | List all your saved homes |
+
+### Moderation (planned)
 | Command | Description |
 |---------|-------------|
 | `/kick` | Kick a player from the server |
