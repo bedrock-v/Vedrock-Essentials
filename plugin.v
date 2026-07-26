@@ -8,6 +8,7 @@ pub struct Essentials {
 mut:
     tpa  &commands.TpaManager  = unsafe { nil }
     home &commands.HomeManager = unsafe { nil }
+    warp &commands.WarpManager = unsafe { nil }
 }
 
 pub fn (e Essentials) meta() plugins.Meta {
@@ -21,6 +22,7 @@ pub fn (e Essentials) meta() plugins.Meta {
 pub fn (mut e Essentials) on_enable(mut api plugins.Api) {
     e.tpa = commands.new_tpa_manager()
     e.home = commands.new_home_manager()
+    e.warp = commands.new_warp_manager()
 
     api.register_command(commands.MsgCommand{})
     api.register_command(commands.SpawnCommand{})
@@ -31,6 +33,10 @@ pub fn (mut e Essentials) on_enable(mut api plugins.Api) {
     api.register_command(commands.HomeCommand{ manager: e.home })
     api.register_command(commands.DelhomeCommand{ manager: e.home })
     api.register_command(commands.HomesCommand{ manager: e.home })
+    api.register_command(commands.SetwarpCommand{ manager: e.warp })
+    api.register_command(commands.WarpCommand{ manager: e.warp })
+    api.register_command(commands.DelwarpCommand{ manager: e.warp })
+    api.register_command(commands.WarpsCommand{ manager: e.warp })
 
     e.log.info('Essentials enabled')
 }
