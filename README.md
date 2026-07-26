@@ -15,6 +15,9 @@ v install https://github.com/bedrock-v/plugins.git
 
 ## Commands
 
+> **Note:** Permissions are not yet implemented. All commands are currently accessible to everyone.
+
+
 ### Communication
 | Command | Description |
 |---------|-------------|
@@ -35,6 +38,7 @@ v install https://github.com/bedrock-v/plugins.git
 | `/home [name]` | Teleport to a saved home |
 | `/delhome [name]` | Delete a saved home |
 | `/homes` | List all your saved homes |
+
 
 ### Moderation (planned)
 | Command | Description |
