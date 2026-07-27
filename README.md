@@ -20,7 +20,6 @@ v install https://github.com/bedrock-v/plugins.git
 ### Communication
 | Command | Description |
 |---------|-------------|
-| `/msg <player> <message>` | Send a private message to a player |
 
 ### Teleportation
 | Command | Description |

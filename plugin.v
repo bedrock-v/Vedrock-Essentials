@@ -36,7 +36,6 @@ pub fn (mut e Essentials) on_enable(mut api plugins.Api) {
         default:     .op
     })
 
-    api.register_command(commands.MsgCommand{})
     api.register_command(commands.SpawnCommand{})
     api.register_command(commands.TpaCommand{ manager: e.tpa })
     api.register_command(commands.TpacceptCommand{ manager: e.tpa })
