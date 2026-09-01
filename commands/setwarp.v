@@ -38,9 +38,9 @@ pub fn (c SetwarpCommand) execute(mut sender cmd.Sender, ctx cmd.Context) ! {
     }
 
     name := ctx.args[0]
-    x, y, z := sender.position()
+    pos := sender.position()
 
     mut mgr := unsafe { c.manager }
-    mgr.save(name, x, y, z)
+    mgr.save(name, pos.x, pos.y, pos.z)
     sender.send_message('Warp "${name}" created')!
 }

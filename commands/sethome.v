@@ -34,9 +34,9 @@ pub fn (c SethomeCommand) arguments() []cmd.Argument {
 
 pub fn (c SethomeCommand) execute(mut sender cmd.Sender, ctx cmd.Context) ! {
     name := if ctx.args.len > 0 { ctx.args[0] } else { 'default' }
-    x, y, z := sender.position()
+    pos := sender.position()
 
     mut mgr := unsafe { c.manager }
-    mgr.save(ctx.sender_name, name, x, y, z)
+    mgr.save(ctx.sender_name, name, pos.x, pos.y, pos.z)
     sender.send_message('Home "${name}" saved')!
 }

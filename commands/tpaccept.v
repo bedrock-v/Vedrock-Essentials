@@ -40,8 +40,8 @@ pub fn (c TpacceptCommand) execute(mut sender cmd.Sender, ctx cmd.Context) ! {
         return
     }
 
-    x, y, z := sender.position()
-    requester.teleport(x, y, z)
+    pos := sender.position()
+    requester.teleport(pos.x, pos.y, pos.z)
     requester.send_message('${ctx.sender_name} accepted your teleport request')!
     sender.send_message('Teleport request from ${req.from} accepted')!
     mgr.remove(ctx.sender_name)
