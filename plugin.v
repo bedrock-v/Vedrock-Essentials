@@ -11,6 +11,7 @@ mut:
     home &commands.HomeManager = unsafe { nil }
     warp &commands.WarpManager = unsafe { nil }
     ban  &commands.BanManager  = unsafe { nil }
+    mute &commands.MuteManager = unsafe { nil }
 }
 
 pub fn (e Essentials) meta() plugins.Meta {
@@ -26,6 +27,7 @@ pub fn (mut e Essentials) on_enable(mut srv server.Server) {
     e.home = commands.new_home_manager()
     e.warp = commands.new_warp_manager()
     e.ban = commands.new_ban_manager()
+    e.mute = commands.new_mute_manager()
 
     permission.register(permission.Permission{
         name:        'essentials.setwarp'
@@ -47,6 +49,11 @@ pub fn (mut e Essentials) on_enable(mut srv server.Server) {
         description: 'Allows banning and unbanning players'
         default:     .op
     })
+    permission.register(permission.Permission{
+        name:        'essentials.mute'
+        description: 'Allows muting and unmuting players'
+        default:     .op
+    })
 
     srv.register_command(commands.SpawnCommand{})
     srv.register_command(commands.TpaCommand{ manager: e.tpa })
@@ -63,8 +70,11 @@ pub fn (mut e Essentials) on_enable(mut srv server.Server) {
     srv.register_command(commands.KickCommand{})
     srv.register_command(commands.BanCommand{ manager: e.ban })
     srv.register_command(commands.UnbanCommand{ manager: e.ban })
+    srv.register_command(commands.MuteCommand{ manager: e.mute })
+    srv.register_command(commands.UnmuteCommand{ manager: e.mute })
 
     srv.register_event(&commands.BanHandler{ manager: e.ban }, .normal)
+    srv.register_event(&commands.MuteHandler{ manager: e.mute }, .normal)
 }
 
 pub fn (mut e Essentials) on_disable() {}
