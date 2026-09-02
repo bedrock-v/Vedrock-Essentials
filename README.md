@@ -6,20 +6,9 @@ The essential plugin suite for Vedrock: teleportation, moderation, and server ma
 
 ## Installation
 
-Requires [Vedrock](https://github.com/bedrock-v/Vedrock03) and [bedrock-v/plugins](https://github.com/bedrock-v/plugins).
-
-```
-v install https://github.com/bedrock-v/plugins.git
-```
-
+Requires [Vedrock](https://github.com/bedrock-v/Vedrock) and [bedrock-v/plugins](https://github.com/bedrock-v/plugins).
 
 ## Commands
-
-
-
-### Communication
-| Command | Description |
-|---------|-------------|
 
 ### Teleportation
 | Command | Description |
@@ -37,13 +26,22 @@ v install https://github.com/bedrock-v/plugins.git
 | `/delhome [name]` | Delete a saved home |
 | `/homes` | List all your saved homes |
 
-
-### Moderation (planned)
+### Warps
 | Command | Description |
 |---------|-------------|
-| `/kick` | Kick a player from the server |
-| `/ban` | Ban a player from the server |
-| `/mute` | Prevent a player from chatting |
+| `/setwarp <name>` | Create a warp point at your position |
+| `/warp <name>` | Teleport to a warp point |
+| `/delwarp <name>` | Delete a warp point |
+| `/warps` | List all warp points |
+
+### Moderation
+| Command | Description |
+|---------|-------------|
+| `/kick <player> [reason]` | Kick a player from the server |
+| `/ban <player> [reason]` | Ban a player from the server |
+| `/unban <player>` | Unban a player |
+| `/mute <player>` | Prevent a player from chatting |
+| `/unmute <player>` | Allow a muted player to chat again |
 
 ## License
 
