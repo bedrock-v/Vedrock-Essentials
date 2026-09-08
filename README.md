@@ -45,4 +45,4 @@ Requires [Vedrock](https://github.com/bedrock-v/Vedrock) and [bedrock-v/plugins]
 
 ## License
 
-[LGPL-3.0](LICENSE)
+[MIT](LICENSE)
